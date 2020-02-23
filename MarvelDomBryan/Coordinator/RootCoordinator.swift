@@ -35,7 +35,8 @@ final class RootCoordinator: Coordinator {
 extension RootCoordinator: RootNavigationDelegate {
     func didSelect(comic: Comics?) {
         guard let comic = comic else { return }
-        let detailsViewController = ComicDetailController(comic: comic)
+        let viewModel = ComicDetailViewModel(comic: comic)
+        let detailsViewController = ComicDetailController(viewModel: viewModel)
         navigationController.pushViewController(detailsViewController, animated: true)
     }
 }

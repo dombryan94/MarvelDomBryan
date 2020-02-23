@@ -8,14 +8,12 @@
 
 import UIKit
 
-class ComicDetailController: UIViewController {
+final class ComicDetailController: UIViewController {
     
-//    private let viewModel: HomeViewModelProtocol
-    private let comic: Comics
+    private let viewModel: ComicDetailViewable
     
-    init(comic: Comics) {
-//        self.viewModel = viewModel
-        self.comic = comic
+    init(viewModel: ComicDetailViewable) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -23,7 +21,9 @@ class ComicDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = comic.title
-        view.backgroundColor = .systemGray
+    }
+    
+    override func loadView() {
+        self.view = ComicDetailView(viewModel: viewModel)
     }
 }

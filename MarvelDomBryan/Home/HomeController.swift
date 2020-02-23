@@ -14,7 +14,7 @@ enum HomeTableViewState {
     case failed
 }
 
-class HomeController: UITableViewController {
+final class HomeController: UITableViewController {
     
     weak var navigationDelegate: RootNavigationDelegate?
     
