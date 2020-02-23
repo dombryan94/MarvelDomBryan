@@ -14,7 +14,17 @@ enum MarvelServiceError: Error {
     case networkRequestError, jsonError, noData
 }
 
-final class MarvelService {
+protocol MarvelServicable {
+    func fetchComics(searchText: String?, completion: @escaping MarvelServiceCompletion)
+}
+
+extension MarvelServicable {
+    func fetchComics(searchText: String? = nil, completion: @escaping MarvelServiceCompletion) {
+        fetchComics(searchText: searchText, completion: completion)
+    }
+}
+
+final class MarvelService: MarvelServicable {
     
     private let networkManager: NetworkManaging
     

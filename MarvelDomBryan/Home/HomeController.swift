@@ -51,15 +51,19 @@ final class HomeController: UITableViewController {
         title = "Comics"
         setupActivityIndicator()
         render(.loading)
+        fetchComics()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func fetchComics() {
         viewModel.fetchComics(then: { [weak self] state in
             DispatchQueue.main.async {
                 self?.render(state)
             }
         })
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -74,6 +78,7 @@ extension HomeController {
             activityIndicator.stopAnimating()
         case .failed:
             activityIndicator.stopAnimating()
+            showAlert()
         }
     }
     
@@ -155,5 +160,18 @@ extension HomeController: UISearchResultsUpdating, UISearchControllerDelegate {
         searchController.searchBar.placeholder = "Search Comics"
         definesPresentationContext = true
         return searchController
+    }
+}
+
+// MARK: - Alert View
+extension HomeController {
+    private func showAlert() {
+        let alert = UIAlertController(title: "Woah!",
+                                      message: "Looks like something went wrong, we need a super hero..",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "To the Batmobile", style: .destructive, handler: { [weak self] _ in
+            self?.fetchComics()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

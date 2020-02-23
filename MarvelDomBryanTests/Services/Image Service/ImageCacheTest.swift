@@ -22,6 +22,7 @@ class ImageCacheTests: XCTestCase {
         subject = nil
     }
 
+    ///I have excluded this test as in Xcode beta 11.4 I was having issues retrieving an image from bundle. Something to look into with more time.
     func xtest_CachingImage_LoadingImage_Works() {
         guard let imageData = ImageCacheTests.mockImageData else {
             XCTFail("No image in bundle")
@@ -47,6 +48,5 @@ extension ImageCacheTests {
             print(error)
             return nil
         }
-//        return try? Data(contentsOf: path)
     }
 }

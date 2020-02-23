@@ -25,26 +25,21 @@ struct Comics: Codable {
     let title: String
     let issueNumber: Int
     let description: String?
-//    let resultDescription: String
-//    let modified: Date
-//    let isbn, upc, diamondCode, ean: String
-//    let issn: Issn
-//    let format: Format
-//    let pageCount: Int
-//    let textObjects: [TextObject]
-//    let resourceURI: String
+    let modified: Date
+    let format: String
+    let pageCount: Int
+    let resourceURI: String
     let urls: [URLElement]
-//    let series: Series
-//    let variants: [Series]
-//    let collections, collectedIssues: [Any?]
-//    let dates: [DateElement]
-//    let prices: [Price]
+    let series: Series
+    let variants: [Series]
+    let dates: [DateElement]
+    let prices: [Price]
     let thumbnail: Thumbnail
-//    let images: [Thumbnail]
-//    let creators: Creators
-//    let characters: Characters
-//    let stories: Stories
-//    let events: Characters
+    let images: [Thumbnail]
+    let creators: Creators
+    let characters: Characters
+    let stories: Stories
+    let events: Characters
 }
 
 // MARK: - Characters
@@ -88,10 +83,6 @@ enum DateType: String, Codable {
     case unlimitedDate
 }
 
-enum Format: String, Codable {
-    case comic
-}
-
 // MARK: - Thumbnail
 struct Thumbnail: Codable {
     let path: String
@@ -105,11 +96,6 @@ struct Thumbnail: Codable {
 
 enum Extension: String, Codable {
     case jpg = "jpg"
-}
-
-enum Issn: String, Codable {
-    case empty
-    case the19412142
 }
 
 // MARK: - Price
@@ -135,28 +121,9 @@ struct Stories: Codable {
 struct StoriesItem: Codable {
     let resourceURI: String
     let name: String
-    let type: ItemType
+    let type: String
 }
 
-enum ItemType: String, Codable {
-    case cover
-    case interiorStory
-}
-
-// MARK: - TextObject
-struct TextObject: Codable {
-    let type: TextObjectType
-    let language: Language
-    let text: String
-}
-
-enum Language: String, Codable {
-    case enUs
-}
-
-enum TextObjectType: String, Codable {
-    case issueSolicitText
-}
 
 // MARK: - URLElement
 struct URLElement: Codable {

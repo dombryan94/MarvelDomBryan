@@ -25,9 +25,9 @@ class HomeViewModel: HomeViewModelProtocol {
     var comics: [Comics]?
     var filteredComics: [Comics] = []
     
-    private let marvelService: MarvelService
+    private let marvelService: MarvelServicable
     
-    init(marvelService: MarvelService) {
+    init(marvelService: MarvelServicable) {
         self.marvelService = marvelService
     }
     
