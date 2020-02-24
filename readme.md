@@ -12,3 +12,4 @@ Finally the home controller makes use of iOS13s ability to add a search controll
 - Better handling of dark mode.
 - Issue with testing image cache service: Not able to obtain image from bundle.
 - A slightly prettier detail view.
+- Debounce the search request so that it isn't called on every character typed.
