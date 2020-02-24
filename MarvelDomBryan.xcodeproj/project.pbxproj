@@ -10,6 +10,8 @@
 		3B4CBD8E24031D540020FDE3 /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CBD8D24031D540020FDE3 /* ComicDetailView.swift */; };
 		3B4CBD90240320F60020FDE3 /* ComicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CBD8F240320F60020FDE3 /* ComicDetailViewModel.swift */; };
 		3B4CBD932403308A0020FDE3 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CBD922403308A0020FDE3 /* HomeViewModelTest.swift */; };
+		3B4CBD942403CD4D0020FDE3 /* ComicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CBD8F240320F60020FDE3 /* ComicDetailViewModel.swift */; };
+		3B4CBD952403CD580020FDE3 /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CBD8D24031D540020FDE3 /* ComicDetailView.swift */; };
 		3BA181C3240165CE0054F6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA181C2240165CE0054F6DD /* AppDelegate.swift */; };
 		3BA181C5240165CE0054F6DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA181C4240165CE0054F6DD /* SceneDelegate.swift */; };
 		3BA181C7240165CE0054F6DD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA181C6240165CE0054F6DD /* HomeController.swift */; };
@@ -424,6 +426,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4CBD952403CD580020FDE3 /* ComicDetailView.swift in Sources */,
+				3B4CBD942403CD4D0020FDE3 /* ComicDetailViewModel.swift in Sources */,
 				3BA181F624018B0A0054F6DD /* URLSessionProtocol.swift in Sources */,
 				3BA1820C24018C170054F6DD /* MarvelService.swift in Sources */,
 				3BA18217240198BC0054F6DD /* ComicDetailController.swift in Sources */,

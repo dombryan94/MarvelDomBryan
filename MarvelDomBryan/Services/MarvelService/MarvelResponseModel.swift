@@ -25,21 +25,21 @@ struct Comics: Codable {
     let title: String
     let issueNumber: Int
     let description: String?
-    let modified: Date
-    let format: String
-    let pageCount: Int
-    let resourceURI: String
+//    let modified: Date
+//    let format: String
+//    let pageCount: Int
+//    let resourceURI: String
     let urls: [URLElement]
-    let series: Series
-    let variants: [Series]
-    let dates: [DateElement]
-    let prices: [Price]
+//    let series: Series
+//    let variants: [Series]
+//    let dates: [DateElement]
+//    let prices: [Price]
     let thumbnail: Thumbnail
-    let images: [Thumbnail]
-    let creators: Creators
-    let characters: Characters
-    let stories: Stories
-    let events: Characters
+//    let images: [Thumbnail]
+//    let creators: Creators
+//    let characters: Characters
+//    let stories: Stories
+//    let events: Characters
 }
 
 // MARK: - Characters
